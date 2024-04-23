@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>registration</title>
+        <link rel="icon" type="image/x-icon" href="trader.png">
+    </head>
+    <body style="margin-left: 30%;background-color: black;">
+        <div style="text-align: center; background-color: bisque; width: 550px; height: 450px;">
+            <h1 style="text-align: center; color: blue;">PERSONAL INFORMATION</h1>
+            <form method="post" action="register_members.php">
+                    <label for="name">ENTER YOUR FULL NAME </label></br>
+                    <br>
+                    <input type="text" id="NAME" name="NAME"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="EMAIL">ENTER YOUR EMAIL </label></br>
+                    <br>
+                    <input type="EMAIL" id="EMAIL" name="EMAIL"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="P/NUMBER">ENTER YOUR PHONE NUMBER</label></br>
+                    <br>
+                    <input type="NUMBER" id="P_NUMBER" name="P_NUMBER"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    </div>
+        <div style="text-align: center; background-color: bisque; width: 550px; height: 450px;">
+            <h1 style="text-align: center; color: blue;">BUSINESS INFORMATION</h1>
+            
+                    <label for="name">ENTER BUSINESS NAME </label></br>
+                    <br>
+                    <input type="text" id="BNAME" name="BNAME"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="NUMBER">ENTER BUSINESS NUMBER </label></br>
+                    <br>
+                    <input type="text" id="b_number" name="b_number"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="LOCATION">SELECT BUSINESS LOCATION</label><br>
+                    <br>
+                    <input type="radio" name="location" value="MWARANGENI">MWARENGENI
+        <input type="radio" name="location"value="KAMAYAGI">KAMAYAGI
+        <input type="radio" name="location"value="CIAMPIU"> CIAMPIU
+                                  <br>
+                    
+        </div>
+        <div style="text-align: center; background-color: bisque; width: 550px; height: 450px;">
+            <h1 style="text-align: center; color: blue;">TRANSATIONS & SECURITY</h1>
+            
+                    <label for="t/number" placeholder="eg RJC17ZVNM">ENTER TRANSACTION NUMBER USED TO PAY FOR REGISTRATION </label></br>
+                    <br>
+                    <input type="text" id="t_number" name="t_number"required style=" width: 400px; background-color: cornsilk;color: blue;" placeholder="eg RJC17ZVNM"></br>
+                    <br>
+                    <label for="pasword">CREATE PASSWORD</label></br>
+                    <input type="password" id="pasword" name="pasword"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <input type="checkbox" onclick="myfunction()">show password</br>
+                    <script>
+                      function myfunction(){
+                        var x = document.getElementById("pasword");
+                        if (x.type==="password"){
+                          x.type="text";
+                        }else{
+                          x.type="password";
+                        }
+                      }
+                    </script></br>
+                    <br>
+                    <label for="pasword">CONFIRM PASSWORD</label></br>
+                    <input type="password" id="pasword" name="pasword"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <input type="checkbox" onclick="myfunction()">show password</br>
+                    <script>
+                      function myfunction(){
+                        var x = document.getElementById("pasword");
+                        if (x.type==="password"){
+                          x.type="text";
+                        }else{
+                          x.type="password";
+                        }
+                      }
+                    </script>
+                    <br>
+                    <input type="submit" style="background-color: blueviolet;color:brown;">
+                    <input type="reset" style="background-color: blueviolet;color:rgb(71, 165, 42);">
+                </form>
+            </div>
+    </body>
+</html>

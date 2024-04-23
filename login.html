@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOG IN</title>
+    <link rel="icon" type="image/x-icon" href="trader.png">
+
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .container {
+            width: 350px;
+            height: 350px;
+            background-color: blue;
+            margin: 0 auto;
+            padding: 5%;
+        }
+        h1, h2, p {
+            color: white;
+        }
+        input[type="email"],
+        input[type="password"] {
+            background-color: cornsilk;
+            color: blue;
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: blueviolet;
+            color:white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: goldenrod;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body style="background-image:url(cover5.jpg);">
+    <div class="container">
+        <h1>HELLO</h1>
+        <p id="greeting"></p>
+        <script>
+            function displayGreeting() {
+                var now = new Date();
+                var hour = now.getHours();
+
+                var greeting;
+
+                if (hour >= 6 && hour < 12) {
+                    greeting = "Good morning!";
+                } else if (hour >= 12 && hour < 18) {
+                    greeting = "Good afternoon!";
+                } else {
+                    greeting = "Good evening!";
+                }
+
+                document.getElementById("greeting").innerText = greeting;
+            }
+            displayGreeting();
+        </script>
+        <h2>LOGIN</h2>
+        <form action="login.php" method="post">
+            <label for="email">ENTER YOUR EMAIL </label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">ENTER PASSWORD</label><br>
+            <input type="password" id="pasword" name="pasword" required><br>
+            <input type="checkbox" onclick="showPassword()">Show password<br>
+            <script>
+                function showPassword() {
+                    var x = document.getElementById("pasword");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <input type="submit" value="Login">
+            <a href="register.html" target="_blank">Click to register</a>
+            <br>
+            <a href="official.php" target="_blank">LOGIN AS ADMIN</a>
+        </form>
+    </div>
+</body>
+</html>

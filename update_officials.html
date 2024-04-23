@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>official registration</title>
+        <link rel="icon" type="image/x-icon" href="trader.png">
+    </head>
+    <body style="margin-left: 30%;background-color: black;">
+        <div style="text-align: center; background-color: bisque; width: 550px; height: 700px;">
+            <h1 style="text-align: center; color: blue;">OFFICIAL REGISTRATION</h1>
+            <form method="post" action="official_update.php">
+                    <label for="name">ENTER YOUR FULL NAME </label></br>
+                    <br>
+                    <input type="text" id="NAME" name="NAME"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="EMAIL">ENTER YOUR EMAIL </label></br>
+                    <br>
+                    <input type="EMAIL" id="EMAIL" name="EMAIL"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="P/NUMBER">ENTER YOUR PHONE NUMBER</label></br>
+                    <br>
+                    <input type="NUMBER" id="P_NUMBER" name="P_NUMBER"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="name">ENTER YOUR WORK NUMBER </label></br>
+                    <br>
+                    <input type="text" id="WNAME" name="WNAME"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="name">ENTER YOUR ID NUMBER </label></br>
+                    <br>
+                    <input type="text" id="ID" name="ID"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <br>
+                    <label for="NUMBER">ENTER YOUR POSITION </label></br>
+                    <select id="POSITION" name="POSITION"required style="background-color: cornsilk;color: blue; width:400px;">
+                      <option value=""></option>
+                      <option value="loans">loans</option>
+                      <option value="savings">savings</option>
+                      <option value="marry go round">marry go round</option>
+                      <option value="advertisements">advertisements</option>
+                      <option value="registration">registration</option>
+                    </select><br>
+                    <label for="pasword">CREATE PASSWORD</label></br>
+                    <input type="password" id="pasword" name="pasword"required style=" width: 400px; background-color: cornsilk;color: blue;"></br>
+                    <input type="checkbox" onclick="myfunction()">show password</br>
+                    <script>
+                      function myfunction(){
+                        var x = document.getElementById("pasword");
+                        if (x.type==="password"){
+                          x.type="text";
+                        }else{
+                          x.type="password";
+                        }
+                      }
+                    </script></br>
+                    <br>
+                    <input type="submit" style="background-color: blueviolet;color:brown;">
+                    <input type="reset" style="background-color: blueviolet;color:rgb(71, 165, 42);">
+                </form>
+            </div>
+    </body>
+</html>

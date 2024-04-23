@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIK MEMBERS</title>
+    <link rel="stylesheet" href="traders.css">
+    <link rel="icon" type="image/x-icon" href="trader.png">
+       </head>
+
+<body style="background-image: url(cover4.jpg); height: auto;">
+    <header>
+        <p style="text-align: right;">
+            <button class="customers"><a href="traders.html"
+                    style="text-decoration: none; text-align: left;">HOME</a></button>
+                    <div1 class="dropdown">
+                <button class="customers">CUSTOMERCARE</button>
+                <div1 class="dropdown-men1" style="margin-left: 56%; min-width: 160px;">
+                    <a href="callto:" style="text-decoration: none;text-align: left;font-size:160%;"> <img
+                            src="call.png" class="call-icon" id="callIcon" alt="calls"
+                            style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the call icon element
+                        var callIcon = document.getElementById('callIcon');
+
+                        // Add click event listener to the call icon
+                        callIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired phone number
+                            var phoneNumber = '+254716140575';
+
+                            // Initiate the phone call
+                            window.location.href = 'tel:' + phoneNumber;
+                        });
+                        </script>
+                    </a>
+                    <a href="" style="text-align: left;font-size:160%;" class="whatsapp-icon" id="whatsappIcon"> <img
+                            src="whatsapp.png" alt="whatsapp" style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the WhatsApp icon element
+                        var whatsappIcon = document.getElementById('whatsappIcon');
+
+                        // Add click event listener to the WhatsApp icon
+                        whatsappIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired WhatsApp number
+                            var phoneNumber = '+254716140575'; // Your WhatsApp number
+
+                            // Generate the WhatsApp message link
+                            var whatsappLink = 'https://wa.me/' + phoneNumber;
+
+                            // Open the WhatsApp link in a new tab/window
+                            window.open(whatsappLink, '_blank');
+                        });
+                        </script>
+                    </a>
+
+                    <a href="mailto:timothykimanzi47@gmail.com"
+                        style="text-decoration: none;text-align: left;font-size:160%;"> <img src="email.jpg" alt="email"
+                            style="height: 40px; width: 40px;"></a>
+                </div1>
+            </div1>
+            <div1 class="dropdown1">
+                <button class="customers">ABOUTUS</button>
+                <div2 class="dropdown-men2" style="margin-left: 64%; min-width: 160px;">
+
+                    <a href="history.html" style="text-decoration: none;text-align: center; font-size:160%;">
+                        History</a>
+                    <a href="location.html" style="text-decoration: none;text-align: center;font-size:160%;">Location</a>
+                    <a href="aims.html" style="text-decoration: none;text-align: center;font-size:160%;">Goals</a>
+                    <a href="activities.html"
+                        style="text-decoration: none;text-align: center;font-size:160%;">Administration</a>
+
+                </div2>
+            </div1>
+            <div1 class="dropdown2">
+                <button class="customers">SERVICES</button>
+                <div3 class="dropdown-men3" style="margin-left: 70%; min-width: 160px;">
+
+                    <a href="loans.html" style="text-decoration: none;text-align: center;font-size:160%;"> loans</a>
+                    <a href="savings.html" style="text-decoration: none;text-align: center;font-size:160%;"> savings</a>
+                    <a href="advertisement.html" style="text-decoration: none;text-align: center;font-size:160%;">advertisement</a>
+                    <a href="#p1" style="text-decoration: none;text-align: center;font-size:160%;">communication</a>
+                    <a href="marry go round.html" style="text-decoration: none;text-align: center;font-size:160%;"> marrygoround</a>
+
+                </div3>
+            </div1>
+            <button class="customers"><a href="calculate.php"
+                style="text-decoration: none; text-align: left;">CALCULATOR</a></button>
+            <button class="customers"> <a href="official.php"
+                    style="text-decoration: none; text-align: left;">OFFICIALS</a></button>
+            <button class="customers" id="logout" style="text-decoration: none;">logout</a></button>
+            <script>
+            document.getElementById('logout').addEventListener('click', function() {
+                // Send an AJAX request to the logout.php script
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'logout.php', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            // Redirect to the login page after successful logout
+                            window.location.href = 'tik home.php';
+                        } else {
+                            // Handle errors if any
+                            console.error('Logout failed: ' + xhr.responseText);
+                        }
+                    }
+                };
+                xhr.send();
+            });
+            </script>
+        </p>
+
+        <p style="color: rgb(6, 253, 26);"> <img src="trader.png" style="height: 3cm; width: 3cm;"><br> TIK TRADERS
+            SACCO</p>
+        <p id="greeting" style="text-align: center;font-style: italic;font-weight: bold;">
+            <script>
+                function displayGreeting() {
+                    var now = new Date();
+                    var hour = now.getHours();
+            
+                    var greeting;
+            
+                    if (hour >= 6 && hour < 12) {
+                        greeting = "Good morning!";
+                    } else if (hour >= 12 && hour < 18) {
+                        greeting = "Good afternoon!";
+                    } else {
+                        greeting = "Good evening!";
+                    }
+            
+                    var greetingElement = document.getElementById("greeting");
+                    greetingElement.innerText = greeting;
+                    greetingElement.style.fontSize = "150%";
+                    greetingElement.style.color = "white";
+            
+                    setTimeout(function() {
+                        greetingElement.innerText = "It's nice to meet you.";
+                        greetingElement.style.color = "blue";
+                        greetingElement.style.fontWeight = "bold";
+                        greetingElement.style.fontSize = "150%";
+                    }, 3000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText = "Welcome to the traders association site";
+                        greetingElement.style.color = "black";
+                        greetingElement.style.fontSize = "150%";
+                    }, 6000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText = "You have preferences to::";
+                        greetingElement.style.color = "yellow";
+                        greetingElement.style.fontSize = "150%";
+                    }, 9000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText = "1. GET LOANS";
+                        greetingElement.style.color = "rgb(6, 253, 26)";
+                        greetingElement.style.fontSize = "150%";
+                    }, 12000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText = "2.TO SAVE WITH US!";
+                        greetingElement.style.color = "blue";
+                        greetingElement.style.fontSize = "150%";
+                    }, 15000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText =
+                            "3.TO ADVERTISE YOUR SALES IN OUR SITE!";
+                        greetingElement.style.color = "white";
+                        greetingElement.style.fontSize = "150%";
+                    }, 18000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText =
+                            "4. JOIN A MERRY-GO-ROUND GROUP FOR OUR MEMBERS!";
+                        greetingElement.style.color = "black";
+                        greetingElement.style.fontSize = "150%";
+                    }, 21000);
+            
+                    setTimeout(function() {
+                        greetingElement.innerText = "THANK YOU FOR CHOOSING US!";
+                        greetingElement.style.color = "rgb(6, 253, 26)";
+                        greetingElement.style.fontWeight = "bold";
+                        greetingElement.style.fontSize = "150%";
+                    }, 24000);
+            
+                    // Repeat the process every 27 seconds
+                    setTimeout(displayGreeting, 27000);
+                }
+            
+                displayGreeting(); // Display greeting when the page loads
+            </script>
+        </p>
+    </header>
+    <p>
+    <div id="d1" class="centered">
+        <div class="left">
+            <a href="savings.html" target="_blank"><img src="save.jpg" alt="savings"
+                    style="height: 300px;width: 250px;"></a></br>
+        </div>
+    </div>
+    <div id="d2" class="">
+        <div class="left">
+            <h style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;color: blue;">savings</h>
+            <pre><h style="text-decoration:underline; font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;" >Members are capable to:</h>
+<p style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">- Make there savings here.
+
+-Check amount they have saved.
+
+- Withdraw there savings.
+    Go to saving page</p></pre>
+            <strong><a href="savings.html" target="_blank"
+                    style="text-decoration: none; border: solid;background-color:black;color: white">
+                    savings</a> </strong>
+
+        </div>
+    </div>
+    <div id="d4" class="right">
+        <div class="left">
+            <h style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;color: blue;">loans</h>
+            <pre> <h style="text-decoration:underline; font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">Loan services offered are:</h></br>
+<p style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">
+-Borrowing</br>
+-Paying</br>
+-Checking limit</br>
+-Checking balances<br>
+-Penalties
+    Go to loans page.
+               </p></pre>
+            <a href="loans.html" target="_blank"
+                style="text-decoration: none; border: solid;background-color:black;color: white">
+
+                go to loans</a>
+        </div>
+    </div>
+    <div id="d3" class="left">
+        <div class="right">
+            <a href="loans.html" target="_blank"> <img src="loan.jpg" alt="loans"
+                    style="height: 300px;width: 250px;"></a></br>
+        </div>
+    </div>
+    </p>
+    <hr>
+    <p id="p1" style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif; height: auto;">
+        <h style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;color: blue;">COMMUNICATION</h></br>
+        <img src="communication1.png" alt=" communication" style="height: 300px;width: 250px;"></a></br>
+        Our members interact with each other her.</br>
+        This may enable us share our experience and problems</br>
+        It may also increase friendship of work</br>
+        Choose the media you want to communicate through</br>
+        <a href="https://chat.whatsapp.com/Gtz1JBQPTy40g9eIzgdr7g" target="_blank" style="text-decoration: none;"><img
+                src="whatsapp.png" alt="whatsapp" style="height: 50px; width: 50px;">join whatsapp</a>
+        <a href="https://web.facebook.com/profile.php?id=100046062320418" style="text-decoration: none;"> <img
+                src="facebook.png" alt="facebook" style="height: 50px; width: 40px;">like our page on FB</a>
+        <a href="https://twitter.com/Kim25818Timothy" style="text-decoration: none;"><img src="twitter.png" alt="twitter"
+                style="height: 50px; width: 40px;"> follow us on X</a>
+    </p>
+    <div id="d1" class="centered">
+        <div class="left">
+            <a href="advertisement.html" target="_blank"><img src="advertisement.png" alt="advertisement"
+                    style="height: 300px;width: 250px;"></a></br>
+        </div>
+    </div>
+    <div id="d2" class="">
+        <div class="left">
+            <h style="font-weight: bold;font-size: large;font-family: Arial, Helvetica, sans-serif;color: blue;">advertisement</h>
+            <pre> <h style="text-decoration:underline; font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">Our members get access to:</h>
+<p style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">
+- Share what they sell here</br>
+-Search what they want to buy</br>
+-Get details about what they need</br>
+-Order</br>
+-Update</br>
+  Go to saving page
+  </p>
+         </pre>
+            <strong><a href="advertisement.html" target="_blank"
+                    style="text-decoration: none; border: solid;background-color:black;color: white">
+
+                    advertisement</a> </strong>
+        </div>
+    </div>
+    <div id="d4" class="right">
+        <div class="left">
+            <h style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;color: blue;">marry_go_round</h>
+            <pre> <h style="text-decoration:underline; font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">Members can:</h>
+<p style="font-size: large; font-weight: bold;font-family: Arial, Helvetica, sans-serif;">
+-See the people who have contributed</br>
+-See the beneficially</br>
+-Contribute</br>
+  Go to saving page
+</p></pre>
+
+            <strong><a href="marry go round.html" target="_blank"
+                    style="text-decoration: none; border: solid;background-color:black;color: white;">marry_go_round</a></strong>
+        </div>
+    </div>
+    <div id="d3" class="left">
+        <div class="right">
+            <a href="marry go round.html" target="_blank"><img src="marry go round.jpg" alt="marry go round"
+                    style="height: 300px;width: 250px;"></a></br>
+        </div>
+    </div>
+    <hr>
+    <p id="p2">
+    <div id="d9" class="centered" >
+        <div class="left" style="margin-left: 45px;">
+            <h style="font-weight: bold;">SERVICES</h>
+            <form>
+                <ul>
+                    <il><a href="loans.html" style="text-decoration: none;"> loans</a></il>
+                    <il> <a href="savings.html" style="text-decoration: none;"> savings</a></il>
+                    <il><a href="advertisement.html" style="text-decoration: none;">advertisement</a></il>
+                    <il> <a href="#p1" style="text-decoration: none;">communication</a></il>
+                    <il><a href="marry go round.html" style="text-decoration: none;"> marrygoround</a></il>
+                </ul>
+            </form>
+        </div>
+    </div>
+    
+    <div id="da" class="" >
+        <div class="left">
+            <h style="font-weight: bold;">ABOUT US</h>
+            <form>
+                <ul>
+                    <il><a href="history.html" style="text-decoration: none;"> History</a></il>
+                    <il> <a href="location.html" style="text-decoration: none;"> Location</a></il>
+                    <il><a href="aims.html" style="text-decoration: none;">Goals</a></il>
+                    <il> <a href="activities.html" style="text-decoration: none;">Administration</a></il>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div id="db" class="right">
+        <div class="centered">
+            <h style="font-weight: bold;">CUSTOMERCARE</h>
+            <form>
+                <ul>
+                    <il><a href="callto:" style="text-decoration: none;text-align: left;font-size:160%;"> <img
+                            src="call.png" class="call-icon" id="callIcon" alt="calls"
+                            style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the call icon element
+                        var callIcon = document.getElementById('callIcon');
+
+                        // Add click event listener to the call icon
+                        callIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired phone number
+                            var phoneNumber = '+254716140575';
+
+                            // Initiate the phone call
+                            window.location.href = 'tel:' + phoneNumber;
+                        });
+                        </script>
+                    </a></il>
+                    <il> <a href="" style="text-align: left;font-size:160%;" class="whatsapp-icon" id="whatsappIcon"> <img
+                            src="whatsapp.png" alt="whatsapp" style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the WhatsApp icon element
+                        var whatsappIcon = document.getElementById('whatsappIcon');
+
+                        // Add click event listener to the WhatsApp icon
+                        whatsappIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired WhatsApp number
+                            var phoneNumber = '+254716140575'; // Your WhatsApp number
+
+                            // Generate the WhatsApp message link
+                            var whatsappLink = 'https://wa.me/' + phoneNumber;
+
+                            // Open the WhatsApp link in a new tab/window
+                            window.open(whatsappLink, '_blank');
+                        });
+                        </script>
+                    </a></il>
+                   <il>  <a href="mailto:timothykimanzi47@gmail.com"
+                        style="text-decoration: none;text-align: left;font-size:160%;"> <img src="email.jpg" alt="email"
+                            style="height: 40px; width: 40px;"></a>
+                </il>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div id="dc" class="right">
+        <div class="centered">
+            <h style="font-weight: bold;">REGULATIONS</h>
+            <form>
+                <ul>
+                    <a href="goverment.html" style="text-decoration: none;"> Goverment </a><br>
+                    <a href="association.html" style="text-decoration: none;"> Tik_traders</a>
+                    
+                </ul>
+            </form>
+        </div>
+    </div>
+    </p><footer style="background-color: black; color: white; padding-left: 30%;padding-top: 24px;padding-bottom: 24px;">
+    &#174Developed by tik web developing limited company&#8482 @timothykimanzi  &#169; 2024 &#9830; &#9830; &#9830;
+    0716140575 &#9830;&#9830;</footer>
+</body>
+</html

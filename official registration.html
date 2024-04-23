@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Official Registration</title>
+    <link rel="icon" type="image/x-icon" href="trader.png">
+    <style>
+        body {
+            margin-left: 30%;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: bisque;
+            width: 550px;
+            height: auto;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: blue;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="Tel"] ,
+        input[type="number"],
+        #POSITION {
+            width: 400px;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: cornsilk;
+            color: blue;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            width: 150px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: blueviolet;
+            color: brown;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: rgb(71, 165, 42);
+        }
+    </style>
+</head>
+<body style="margin-left: 30%; background-color: black;">
+    <div style="text-align: center; background-color: bisque; width: 550px; height: auto;">
+        <h1 style="text-align: center; color: blue;">OFFICIAL REGISTRATION</h1>
+        <form method="post" action="ADMIN.php" id="registrationForm">
+            <label for="name">ENTER YOUR FULL NAME </label><br><br>
+            <input type="text" id="fullName" name="NAME" required style="width: 400px; background-color: cornsilk; color: blue;"><br><br>
+            <label for="email">ENTER YOUR EMAIL </label><br><br>
+            <input type="email" id="EMAIL" name="EMAIL" required style="width: 400px; background-color: cornsilk; color: blue;"><br><br>
+            <label for="phoneNumber">ENTER YOUR PHONE NUMBER</label><br><br>
+            <input type="tel" id="P_NUMBER" name="P_NUMBER" required style="width: 400px; background-color: cornsilk; color: blue;"><br><br>
+            <label for="workNumber">ENTER YOUR WORK NAME </label><br><br>
+            <input type="text" id="WNAME" name="WNAME" required style="width: 400px; background-color: cornsilk; color: blue;"><br><br>
+            <label for="idNumber">ENTER YOUR ID NUMBER </label><br><br>
+            <input type="number" id="ID" name="ID" required style="width: 400px; background-color: cornsilk; color: blue;"><br><br>
+            <label for="position">ENTER YOUR POSITION </label><br>
+            <select id="POSITION" name="POSITION" required style="background-color: cornsilk; color: blue; width: 400px;;">
+              <option value=""></option>  
+              <option value="loans">loans</option>
+                <option value="savings">savings</option>
+                <option value="marry go round">marry go round</option>
+                <option value="advertisements">advertisements</option>
+                <option value="registration">registration</option>
+            </select><br><br>
+            <label for="password">CREATE PASSWORD</label><br>
+        <input type="password" id="pasword" name="pasword" required><br>
+        
+        <input type="checkbox" onclick="showPassword()">Show Password<br>
+        
+        <label for="confirm_password">CONFIRM PASSWORD</label><br>
+        <input type="password" id="confirm_pasword" name="confirm_pasword" required><br>
+        <input type="checkbox" onclick="showConfirmPassword()">Show Password<br>
+            <br><br>
+            <input type="submit" style="background-color: blueviolet; color: brown;">
+            <input type="reset" style="background-color: blueviolet; color: rgb(71, 165, 42);">
+        </form>
+    </div>
+    <script>
+        // JavaScript to check if passwords match
+        document.querySelector('form').onsubmit = function() {
+            var password = document.getElementById('pasword').value;
+            var confirm_password = document.getElementById('confirm_pasword').value;
+
+            if (password !== confirm_password) {
+                alert("Passwords do not match!");
+                return false;
+            }
+        };
+
+        // Function to toggle password visibility
+        function showPassword() {
+            var x = document.getElementById("pasword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        // Function to toggle confirm password visibility
+        function showConfirmPassword() {
+            var x = document.getElementById("confirm_pasword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        // Allow only numbers in the phone number field
+        document.getElementById("P_NUMBER").addEventListener("input", function() {
+                    this.value = this.value.replace(/\D/g, '');
+                });
+            
+                document.querySelector('form').addEventListener('submit', function(event) {
+                    const email = document.getElementById('EMAIL').value;
+                    const password = document.getElementById('pasword').value;
+                    const phoneNumber = document.getElementById('P_NUMBER').value;
+            
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address.');
+                        event.preventDefault();
+                    } else if (password.length !== 8) {
+                        alert('Password must be 8 characters long.');
+                        event.preventDefault();
+                    } else if (!isValidPhoneNumber(phoneNumber)) {
+                        alert('Phone number must start with "07" or "01" and have 10 digits.');
+                        event.preventDefault();
+                    }
+                });
+            
+                function isValidEmail(EMAIL) {
+                    // Regular expression for basic email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(EMAIL);
+                }
+            
+                function isValidPhoneNumber(P_NUMBER) {
+                    // Regular expression for Kenyan phone number validation
+                    const phoneRegex = /^(07|01)\d{8}$/;
+                    return phoneRegex.test(P_NUMBER);
+                }
+    </script>
+</body>
+</html>

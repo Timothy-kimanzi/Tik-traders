@@ -1,0 +1,80 @@
+body{
+    background-color: coral;
+}
+div{
+    height: 350px;
+    width: 50%;
+   
+    }
+    #d1{
+        background-color: rgb(43, 255, 0);
+        float: left;
+                    }
+    #d2{
+                background-color: gold;
+                float: left;
+                       }
+       #p1{
+        text-align: center;
+        color: blue;
+        font-size:25px;
+       }
+       #p2{
+        text-align: center;
+        background-color: rgb(139, 7, 73);
+       }
+       .customers{
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown-men1{
+       display: none;
+       position:fixed;
+        background-color: bisque;
+        min-width: 360px;
+    }
+    .dropdown-men1 a{
+        color: rgb(43, 226, 125);
+        display: block;
+    }
+    .dropdown-men1 a:hover{
+        background-color: rgb(95, 42, 165);
+    }
+    .dropdown:hover .dropdown-men1{
+        display: block;
+    }
+    .dropdown-men2{
+        display: none;
+        position:fixed;
+         background-color: bisque;
+         min-width: 360px;
+     }
+     .dropdown-men2 a{
+         color: rgb(43, 226, 125);
+         display: block;
+     }
+     .dropdown-men2 a:hover{
+         background-color: rgb(85, 42, 165);
+     }
+     .dropdown1:hover .dropdown-men2{
+         display: block;
+     }
+     .dropdown-men3{
+        display: none;
+        position:fixed;
+         background-color: bisque;
+         min-width: 360px;
+     }
+     .dropdown-men3 a{
+         color: rgb(43, 226, 125);
+         display: block;
+         
+     }
+     .dropdown-men3 a:hover{
+         background-color: rgb(89, 42, 165);
+     }
+     .dropdown2:hover .dropdown-men3{
+         display: block;
+     }

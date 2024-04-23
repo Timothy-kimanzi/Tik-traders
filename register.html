@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="trader.png">
+    <style>
+        body {
+            margin-left: 30%;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: bisque;
+            width: 550px;
+            height: auto;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: blue;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="Tel"] ,
+        input[type="number"] {
+            width: 400px;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: cornsilk;
+            color: blue;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            width: 150px;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: blueviolet;
+            color: brown;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: rgb(71, 165, 42);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            Make sure you have paid registration fee before you start filling this form.<br>
+            If not click this  link to pay: <a href="registrationmpesa.php">PAY THE FEE</a>
+        </p>
+    </div>
+    <div class="container">
+        <h1>PERSONAL INFORMATION</h1>
+        <form method="post" action="memberregister.php">
+            <label for="NAME">ENTER YOUR FULL NAME</label><br>
+            <input type="text" id="NAME" name="NAME" required><br>
+            
+            <label for="EMAIL">ENTER YOUR EMAIL</label><br>
+            <input type="email" id="EMAIL" name="EMAIL" required><br>
+            
+            <label for="P_NUMBER">ENTER YOUR PHONE NUMBER</label><br>
+            <input type="tel" id="P_NUMBER" name="P_NUMBER" required><br>
+    </div>
+
+    <div class="container">
+        <h1>BUSINESS INFORMATION</h1>
+        <label for="BNAME">ENTER BUSINESS NAME</label><br>
+        <input type="text" id="BNAME" name="BNAME" required><br>
+        
+        <label for="b_number">ENTER BUSINESS NUMBER</label><br>
+        <input type="text" id="b_number" name="b_number" required><br>
+        
+        <label>SELECT BUSINESS LOCATION</label><br>
+        <input type="radio" name="location" value="MWARENGENI" id="loc1">MWARENGENI
+        <input type="radio" name="location" value="KAMAYAGI" id="loc2">KAMAYAGI
+        <input type="radio" name="location" value="CIAMPIU" id="loc3">CIAMPIU
+    </div>
+
+    <div class="container">
+        <h1>TRANSACTIONS & SECURITY</h1>
+        <label for="t_number">ENTER TRANSACTION NUMBER USED TO PAY FOR REGISTRATION</label><br>
+        <input type="text" id="t_number" name="t_number" required placeholder="eg RJC17ZVNM"><br>
+        
+        <label for="password">CREATE PASSWORD</label><br>
+        <input type="password" id="pasword" name="pasword" required><br>
+        
+        <input type="checkbox" onclick="showPassword()">Show Password<br>
+        
+        <label for="confirm_password">CONFIRM PASSWORD</label><br>
+        <input type="password" id="confirm_pasword" name="confirm_pasword" required><br>
+        
+        <input type="checkbox" onclick="showConfirmPassword()">Show Password<br>
+        
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </div>
+
+    <script>
+        // JavaScript to check if passwords match
+        document.querySelector('form').onsubmit = function() {
+            var password = document.getElementById('pasword').value;
+            var confirm_password = document.getElementById('confirm_pasword').value;
+
+            if (password !== confirm_password) {
+                alert("Passwords do not match!");
+                return false;
+            }
+        };
+
+        // Function to toggle password visibility
+        function showPassword() {
+            var x = document.getElementById("pasword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+        // Function to toggle confirm password visibility
+        function showConfirmPassword() {
+            var x = document.getElementById("confirm_pasword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+        // Allow only numbers in the phone number field
+        document.getElementById("P_NUMBER").addEventListener("input", function() {
+                    this.value = this.value.replace(/\D/g, '');
+                });
+            
+                document.querySelector('form').addEventListener('submit', function(event) {
+                    const email = document.getElementById('EMAIL').value;
+                    const password = document.getElementById('pasword').value;
+                    const phoneNumber = document.getElementById('P_NUMBER').value;
+            
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address.');
+                        event.preventDefault();
+                    } else if (password.length !== 8) {
+                        alert('Password must be 8 characters long.');
+                        event.preventDefault();
+                    } else if (!isValidPhoneNumber(phoneNumber)) {
+                        alert('Phone number must start with "07" or "01" and have 10 digits.');
+                        event.preventDefault();
+                    }
+                });
+            
+                function isValidEmail(EMAIL) {
+                    // Regular expression for basic email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(EMAIL);
+                }
+            
+                function isValidPhoneNumber(P_NUMBER) {
+                    // Regular expression for Kenyan phone number validation
+                    const phoneRegex = /^(07|01)\d{8}$/;
+                    return phoneRegex.test(P_NUMBER);
+                }
+    </script>
+</body>
+</html>

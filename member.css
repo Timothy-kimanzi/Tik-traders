@@ -1,0 +1,71 @@
+#slideshow {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 75%;
+    height: 400px;
+    display: none;
+    padding:15px;
+    padding-left:20%;
+    text-align:center;
+}
+
+/* Optional: Style for slide transitions */
+.slide {
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.container-fluid {
+    margin-top: 20px;
+}
+
+nav{
+    background: #222;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: #fff;
+}
+nav a:hover{
+    color: #ef4b3f;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.toggle{
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width:600px){
+    nav{
+        display: block;
+        position: relative;
+        }
+        .menu{
+            margin-top: 15px;
+            display: none;
+        }
+        .menu.active, .toggle{
+            display: block;
+        }
+        .toggle{
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ADMIN LOGIN</title>
+    <script>
+        window.onload = function() {
+            var date = new Date();
+            var hour = date.getHours();
+            var greeting;
+
+            if (hour < 12) {
+                greeting = "Good morning";
+            } else if (hour >= 12 && hour < 18) {
+                greeting = "Good afternoon";
+            } else {
+                greeting = "Good evening";
+            }
+
+            document.getElementById('greeting').innerHTML = greeting;
+        };
+    </script>
+</head>
+<body style="text-align: center;">
+    <div style="text-align: center; width: 300px; height: 300px; background-color: blue; margin-left: 35%; padding: 5%;">
+        <h1>HELLO</h1>
+        <p style="text-align: center;">
+            <span id="greeting"></span>, welcome to the admin login page!
+        </p>
+        <form method="post" action="official login.php">
+            <label for="POSITION">ENTER YOUR POSITION</label><br>
+            <input type="text" id="POSITION" name="POSITION" required style="background-color: cornsilk; color: blue;"><br>
+            <label for="WNAME">ENTER WORK NUMBER</label><br>
+            <input type="text" id="WNAME" name="WNAME" required style="background-color: cornsilk; color: blue;"><br>
+            <label for="password">ENTER PASSWORD</label><br>
+            <input type="password" id="password" name="password" required style="background-color: cornsilk; color: blue;"><br>
+            <input type="checkbox" onclick="showPassword()">Show Password<br>
+            <script>
+                function showPassword() {
+                    var x = document.getElementById("password");
+                    if (x.type === "password") {
+                        x.type = "text";
+                    } else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+            <input type="submit" style="background-color: blueviolet; color: brown;">
+            <input type="reset" style="background-color: blueviolet; color: rgb(71, 165, 42);">
+        </form>
+    </div>
+</body>
+</html>

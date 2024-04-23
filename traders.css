@@ -1,0 +1,135 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+}
+div{
+    height: 450px;
+    width: 24.94%;
+    padding-top: 12px;
+    }
+    #d1{
+        background-color:gray;
+        float: left;
+            }
+    #d2{
+                background-color:gray;
+                float: left;
+                border-right: solid;
+
+                    }
+    #d3{
+        background-color: gray;
+        float: right;
+        
+            }
+    #d4{
+                background-color: gray;
+                float: right;
+                
+                    }
+    #p1{
+        background-color: gray;
+        background-position: 500px;
+    
+        text-align: center;
+        background-size: 570px;
+    }    
+    #d5{
+        background-color: gray;
+        float: left;
+    }
+    #d6{
+        background-color: gray;
+        float: left;
+        border-right: solid;
+        }
+    #d7{
+        background-color: gray;
+        float: left;
+    }
+    #d8{
+        background-color: gray;
+        float: right;
+    }
+    #d9{
+        background-color:gold;
+        float:left;
+    }
+    #da{
+        background-color:gold;
+        float:left;
+    }
+    #db{
+        background-color:gold;
+        float:right;
+    }
+    #dc{
+        background-color:gold;
+        float:right;
+    }
+    #p2{
+        background-size: 300px;
+    }
+    .customers{
+        background-color:white ;
+        color:  black;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropdown-men1{
+       display: none;
+       position:absolute;
+        background-color: bisque;
+        min-width: 360px;
+        
+    }
+    .dropdown-men1 a{
+        color: rgb(43, 226, 125);
+        position: relative;
+        display: block;
+    }
+    .dropdown-men1 a:hover{
+        background-color: rgb(95, 42, 165);
+    }
+    .dropdown:hover .dropdown-men1{
+        display: block;
+    }
+    .dropdown-men2{
+        display: none;
+        position:absolute;
+         background-color: bisque;
+         min-width: 360px;
+         
+     }
+     .dropdown-men2 a{
+        color: rgb(43, 226, 125);
+        position: relative;
+        display: block;
+     }
+     .dropdown-men2 a:hover{
+         background-color: rgb(85, 42, 165);
+     }
+     .dropdown1:hover .dropdown-men2{
+         display: block;
+     }
+     .dropdown-men3{
+        display: none;
+        position:absolute;
+         background-color: bisque;
+         min-width: 360px;
+         
+     }
+     .dropdown-men3 a{
+        color: rgb(43, 226, 125);
+        position: relative;
+        display: block;
+         
+     }
+     .dropdown-men3 a:hover{
+         background-color: rgb(89, 42, 165);
+     }
+     .dropdown2:hover .dropdown-men3{
+         display: block;
+     }

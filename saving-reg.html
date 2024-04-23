@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>depositing</title>
+        <link rel="stylesheet" href="withdraw.css">
+        <link rel="icon" type="image/x-icon" href="trader.png">
+        <style>
+            #h1 {
+              font-weight: bold;
+              color: blue;
+              font-size: 30px;
+            }
+            p {
+              color: rgb(2, 2, 7);
+            }
+            label {
+              color: blue;
+            }
+            input[type="email"],
+            input[type="password"] {
+              width: 500px;
+              background-color: cornsilk;
+              color: blue;
+              border-radius: 10px; /* Added curved angles */
+              padding: 5px; /* Added padding for better appearance */
+              border: 1px solid #ccc; /* Added border for clarity */
+            }
+          </style>
+    </head>
+    <body style="text-align: center; background-color:gray">
+        <p style="text-align: right;">
+            <button class="customers"><a href="traders.html"
+                    style="text-decoration: none; text-align: left; color: white;">HOME</a></button>
+                    <div1 class="dropdown">
+                <button class="customers">CUSTOMERCARE</button>
+                <div1 class="dropdown-men1" style="margin-left: 77%; min-width: 160px;">
+                    <a href="callto:" style="text-decoration: none;text-align: left;font-size:160%;"> <img
+                            src="call.png" class="call-icon" id="callIcon" alt="calls"
+                            style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the call icon element
+                        var callIcon = document.getElementById('callIcon');
+
+                        // Add click event listener to the call icon
+                        callIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired phone number
+                            var phoneNumber = '+254716140575';
+
+                            // Initiate the phone call
+                            window.location.href = 'tel:' + phoneNumber;
+                        });
+                        </script>
+                    </a>
+                    <a href="" style="text-align: left;font-size:160%;" class="whatsapp-icon" id="whatsappIcon"> <img
+                            src="whatsapp.png" alt="whatsapp" style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the WhatsApp icon element
+                        var whatsappIcon = document.getElementById('whatsappIcon');
+
+                        // Add click event listener to the WhatsApp icon
+                        whatsappIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired WhatsApp number
+                            var phoneNumber = '+254716140575'; // Your WhatsApp number
+
+                            // Generate the WhatsApp message link
+                            var whatsappLink = 'https://wa.me/' + phoneNumber;
+
+                            // Open the WhatsApp link in a new tab/window
+                            window.open(whatsappLink, '_blank');
+                        });
+                        </script>
+                    </a>
+
+                    <a href="mailto:timothykimanzi47@gmail.com"
+                        style="text-decoration: none;text-align: left;font-size:160%;"> <img src="email.jpg" alt="email"
+                            style="height: 40px; width: 40px;"></a>
+                </div1>
+            </div1>
+            <div1 class="dropdown1">
+                <button class="customers">ABOUTUS</button>
+                <div2 class="dropdown-men2" style="margin-left: 84%; min-width: 160px;">
+
+                    <a href="history.html" style="text-decoration: none;text-align: center; font-size:160%;">
+                        History</a>
+                    <a href="location.html" style="text-decoration: none;text-align: center;font-size:160%;">Location</a>
+                    <a href="aims.html" style="text-decoration: none;text-align: center;font-size:160%;">Goals</a>
+                    <a href="activities.html"
+                        style="text-decoration: none;text-align: center;font-size:160%;">Administration</a>
+
+                </div2>
+            </div1>
+            <div1 class="dropdown2">
+                <button class="customers">SERVICES</button>
+                <div3 class="dropdown-men3" style="margin-left: 87%; min-width: 160px;">
+
+                    <a href="loans.html" style="text-decoration: none;text-align: center;font-size:160%;"> loans</a>
+                    <a href="savings.html" style="text-decoration: none;text-align: center;font-size:160%;"> savings</a>
+                    <a href="advertisement.html" style="text-decoration: none;text-align: center;font-size:160%;">advertisement</a>
+                    <a href="traders.html#p1" style="text-decoration: none;text-align: center;font-size:160%;">communication</a>
+                    <a href="marry go round.html" style="text-decoration: none;text-align: center;font-size:160%;"> marrygoround</a>
+
+                </div3>
+            </div1>
+         </p>
+        <h id="h1" style="font-weight: bold;color:black; font-size: 30px;">Register for savings</h>
+        <p>
+            <p style="color: black; font-size: 25px;">You wont be able to save if you don't register<br>
+            </p>
+             <br >
+            <form action="deposit.php" method="post">
+              <label for="idnumber"> Enter your email</label></br>
+              <input type="email" id="email"name="email"required style="width: 500px;background-color: cornsilk;color: blue;"></br>
+              <label for="password">Enter your password</label><br>
+                <input type="password" id="password" placeholder="8 characters"  name="pasword" pattern=".{8,}" title="Password must be 8 characters" required><br>
+                <input type="radio" id="confirm" name="confirm" value="confirm" required>
+                <label for="confirm" style="color:rgb(20, 19, 17);">Confirm data feed is correct</label><br>
+                <input type="submit" value="Apply" style="background-color: blue;">
+                <input type="reset" value="Cancel">
+              </form>
+              
+              <script>
+                document.querySelector('form').addEventListener('submit', function(event) {
+                  const email = document.getElementById('email').value;
+                  const password = document.getElementById('password').value;
+                  if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address.');
+                    event.preventDefault();
+                  } else if (password.length !== 8) {
+                    alert('Password must be 8 characters long.');
+                    event.preventDefault();
+                  }
+                });
+              
+                function isValidEmail(email) {
+                  // Regular expression for basic email validation
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  return emailRegex.test(email);
+                }
+              </script>
+        </p>
+        <p id= "p2">
+            <div id="d2" class="centered">
+             <div class="left">
+              <h style="font-weight: bold;">SERVICES</h>
+              <form>
+                <ul>
+                  <il><a href="loans.html" style="text-decoration: none;"> loans</a></il></br>
+                  <il> <a href="savings.html" style="text-decoration: none;"> savings</a></il></br>
+                  <il><a href="advertisement.html" style="text-decoration: none;">advertisement</a></il></br>
+                  <il> <a href="traders.html#p1" style="text-decoration: none;">communication</a></il></br>
+                  <il><a href="marry go round.html" style="text-decoration: none;"> marrygoround</a></il></ul></br>
+                </ul>
+              </form>
+             </div>
+            </div>
+            <div id="d2" class="">
+              <div class="left">
+               <h style="font-weight: bold;">ABOUT US</h>
+               <form>
+                 <ul>
+                   <il><a href="history.html" style="text-decoration: none;"> history</a></il></br>
+                   <il> <a href="location.html" style="text-decoration: none;"> Location</a></il></br>
+                   <il><a href="aims.html" style="text-decoration: none;">Goals</a></il></br>
+                   <il> <a href="activities.html" style="text-decoration: none;">Administration</a></il></br>
+                   </ul>
+               </form>
+              </div>
+             </div>
+             <div id="d3" class="right">
+              <div class="centered">
+               <h style="font-weight: bold;">CUSTOMERCARE</h>
+               <form>
+                <ul>
+                    <il><a href="callto:" style="text-decoration: none;text-align: left;font-size:160%;"> <img
+                            src="call.png" class="call-icon" id="callIcon" alt="calls"
+                            style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the call icon element
+                        var callIcon = document.getElementById('callIcon');
+
+                        // Add click event listener to the call icon
+                        callIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired phone number
+                            var phoneNumber = '+254716140575';
+
+                            // Initiate the phone call
+                            window.location.href = 'tel:' + phoneNumber;
+                        });
+                        </script>
+                    </a></il><br>
+                    <il> <a href="" style="text-align: left;font-size:160%;" class="whatsapp-icon" id="whatsappIcon"> <img
+                            src="whatsapp.png" alt="whatsapp" style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the WhatsApp icon element
+                        var whatsappIcon = document.getElementById('whatsappIcon');
+
+                        // Add click event listener to the WhatsApp icon
+                        whatsappIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired WhatsApp number
+                            var phoneNumber = '+254716140575'; // Your WhatsApp number
+
+                            // Generate the WhatsApp message link
+                            var whatsappLink = 'https://wa.me/' + phoneNumber;
+
+                            // Open the WhatsApp link in a new tab/window
+                            window.open(whatsappLink, '_blank');
+                        });
+                        </script>
+                    </a></il><br>
+                   <il>  <a href="mailto:timothykimanzi47@gmail.com"
+                        style="text-decoration: none;text-align: left;font-size:160%;"> <img src="email.jpg" alt="email"
+                            style="height: 40px; width: 40px;"></a>
+                </il>
+                </ul>
+            </form>
+              </div>
+             </div>
+          </p>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+body{
+    background-image: url(view.avif);
+}div{
+    height: 350px;
+    width: 50%;
+    }
+    #d1{
+        background-color: rgb(0, 255, 42);
+        float: left;
+            }
+    #d2{
+                background-color: rgb(247, 5, 5);
+                float: left;
+       }
+       #d3{
+        background-color: gold;
+        float: left;
+       }
+       #h1{
+        text-align: center;
+        color:chartreuse;
+        font-size:25px;
+       }
+       #p1{
+        text-align: center;
+        color: rgb(247, 6, 6);
+        font-size:25px ;
+       }
+       .customers{
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    .dropdown-men1{
+       display: none;
+       position:fixed;
+        background-color: bisque;
+        min-width: 360px;
+    }
+    .dropdown-men1 a{
+        color: rgb(43, 226, 125);
+        display: block;
+    }
+    .dropdown-men1 a:hover{
+        background-color: rgb(95, 42, 165);
+    }
+    .dropdown:hover .dropdown-men1{
+        display: block;
+    }
+    .dropdown-men2{
+        display: none;
+        position:fixed;
+         background-color: bisque;
+         min-width: 360px;
+     }
+     .dropdown-men2 a{
+         color: rgb(43, 226, 125);
+         display: block;
+     }
+     .dropdown-men2 a:hover{
+         background-color: rgb(85, 42, 165);
+     }
+     .dropdown1:hover .dropdown-men2{
+         display: block;
+     }
+     .dropdown-men3{
+        display: none;
+        position:fixed;
+         background-color: bisque;
+         min-width: 360px;
+     }
+     .dropdown-men3 a{
+         color: rgb(43, 226, 125);
+         display: block;
+         
+     }
+     .dropdown-men3 a:hover{
+         background-color: rgb(89, 42, 165);
+     }
+     .dropdown2:hover .dropdown-men3{
+         display: block;
+     }

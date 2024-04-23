@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Goals </title>
+        <link rel="stylesheet" href="newadverts.css">
+        <style>
+            body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color:black;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color:white;
+  padding-left: 8px;
+  width: 350%;
+  height: auto;
+  color:black;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: auto) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+        </style>
+    </head>
+    <body style="background-color: gray;">
+      <p style="text-align: right;">
+        <button class="customers"><a href="tik home.php"
+                style="text-decoration: none; text-align: left; color: white;">HOME</a></button>
+                <div1 class="dropdown">
+            <button class="customers">CUSTOMERCARE</button>
+            <div1 class="dropdown-men1" style="margin-left: 77%; min-width: 160px;">
+                <a href="callto:" style="text-decoration: none;text-align: left;font-size:160%;"> <img
+                        src="call.png" class="call-icon" id="callIcon" alt="calls"
+                        style="height: 40px; width: 40px;">
+                    <script>
+                    // Get the call icon element
+                    var callIcon = document.getElementById('callIcon');
+
+                    // Add click event listener to the call icon
+                    callIcon.addEventListener('click', function() {
+                        // Change the phone number to your desired phone number
+                        var phoneNumber = '+254716140575';
+
+                        // Initiate the phone call
+                        window.location.href = 'tel:' + phoneNumber;
+                    });
+                    </script>
+                </a>
+                <a href="" style="text-align: left;font-size:160%;" class="whatsapp-icon" id="whatsappIcon"> <img
+                        src="whatsapp.png" alt="whatsapp" style="height: 40px; width: 40px;">
+                    <script>
+                    // Get the WhatsApp icon element
+                    var whatsappIcon = document.getElementById('whatsappIcon');
+
+                    // Add click event listener to the WhatsApp icon
+                    whatsappIcon.addEventListener('click', function() {
+                        // Change the phone number to your desired WhatsApp number
+                        var phoneNumber = '+254716140575'; // Your WhatsApp number
+
+                        // Generate the WhatsApp message link
+                        var whatsappLink = 'https://wa.me/' + phoneNumber;
+
+                        // Open the WhatsApp link in a new tab/window
+                        window.open(whatsappLink, '_blank');
+                    });
+                    </script>
+                </a>
+
+                <a href="mailto:timothykimanzi47@gmail.com"
+                    style="text-decoration: none;text-align: left;font-size:160%;"> <img src="email.jpg" alt="email"
+                        style="height: 40px; width: 40px;"></a>
+            </div1>
+        </div1>
+        <div1 class="dropdown1">
+            <button class="customers">ABOUTUS</button>
+            <div2 class="dropdown-men2" style="margin-left: 84%; min-width: 160px;">
+
+                <a href="history.html" style="text-decoration: none;text-align: center; font-size:160%;">
+                    History</a>
+                <a href="location.html" style="text-decoration: none;text-align: center;font-size:160%;">Location</a>
+                <a href="aims.html" style="text-decoration: none;text-align: center;font-size:160%;">Goals</a>
+                <a href="activities.html"
+                    style="text-decoration: none;text-align: center;font-size:160%;">Administration</a>
+
+            </div2>
+        </div1>
+        <div1 class="dropdown2">
+            <button class="customers">SERVICES</button>
+            <div3 class="dropdown-men3" style="margin-left: 87%; min-width: 160px;">
+
+                <a href="tik home.php#loans" style="text-decoration: none;text-align: center;font-size:160%;"> loans</a>
+                <a href="tik home.php#savings" style="text-decoration: none;text-align: center;font-size:160%;"> savings</a>
+                <a href="tik home.php#advertisement" style="text-decoration: none;text-align: center;font-size:160%;">advertisement</a>
+                <a href="tik home.php#communication" style="text-decoration: none;text-align: center;font-size:160%;">communication</a>
+                <a href="tik home.php#marry go round" style="text-decoration: none;text-align: center;font-size:160%;"> marrygoround</a>
+
+            </div3>
+        </div1>
+     </p>
+       <p id="p1"> <h>GOALS AND STRATEGIC PLANS.</h></br>
+    </p>
+        <p> 
+                        <div id="d1" class="centered" style="background-color: gray;">
+                <div class="left">
+                    <h style="color: blue; font-weight: bold;">OUR VISION</h></br>
+                    To be leading, reliable and inclusive SACCO, recognized for our unwavering dedication to financial inclusion and our ability to transform lives through responsible lending and support.</br>
+                    </div>
+            </div>
+            
+            <div id="d1" class="centered" style="background-color: gray;">
+                <div class="right">
+                    <h style="color: blue; font-weight: bold;">MISSION</h></br>
+                    
+                    To provide accessible financial solutions while fostering economic empowerment and sustainable development and
+                    to improve the socio-economic welfare of members through mobilization of savings and provision of market driven financial solutions</br>
+                              </div>
+            </div>
+            <p id="p2">
+                
+              </p>
+              <div id="d1" class="centered" style="height: 650px;background-color: gray">
+                <h style="color: blue; font-weight: bold;">OUR CORE VALUES (click the word to read more)</h>
+                <div class="left" >
+                    <div class="sidenav">
+                      <button class="dropdown-btn">1. Integrity 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-container">
+
+                          <p>1. We foster integrity by implementing transparent financial processes and procedures.<br>
+                          2.Ensuring fair and equitable treatment of all members regardless of their financial status promotes integrity within Traders SACCO.<br>
+                          3. Regular audits and financial disclosures uphold the integrity of TIK Traders SACCO, building trust among its members.<br>
+                          4.Upholding ethical standards and adhering to regulatory requirements<br>
+                          5. roviding accurate and timely information about financial products and services.<br>
+                          6. Encouraging open communication channels and addressing concerns promptly contribute to fostering integrity within Traders SACCO's operations</p>
+                        </div>
+                        <button class="dropdown-btn">2. Innovation 
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-container">
+1. We will  embrace modern technology to streamline financial transactions and member services.<br>
+2 we will Implement flexible and user-friendly digital platforms.<br>
+3. we will Introduce innovative savings and loan products tailored to the diverse needs of members.<br>
+4. Collaboration with fintech partners and exploring emerging trends.<br>
+5. Creating opportunities for member feedback and engagement.<br>
+6. Investing in staff training and development on innovative practices.
+                          </div>
+                          <button class="dropdown-btn">3. Community Engagement 
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-container">
+                            1. We will organizing financial literacy workshops and seminars tailored to local needs.<br>
+                            2. we will also partner with local schools, community centers, and NGOs for outreach programs strengthens Traders SACCO's ties with the community.<br>
+                            3. We will Support local initiatives and events, such as charity drives and cultural festivals, showcases.<br> 4.we will commit to community development.<br>
+                            5. We will establish advisory committees comprising community members fosters dialogue and ensures Traders SACCO's services align with community priorities.<br>
+                            6. Offering volunteer opportunities and sponsorships for community projects empowers members to contribute actively to the betterment of their neighborhoods.
+                          </div>
+                          <button class="dropdown-btn">4. Responsible Finance
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-container">
+                            1.We offer affordable and transparent loan products with reasonable interest rates.<br>
+                            2. Implement financial education programs empowering members to make informed decisions and manage their finances responsibly.<br>
+                            3. Conducting thorough assessments of borrowers' repayment capacity to ensures that loans are granted responsibly, mitigating the risk of default.<br>
+                            4. Incorporating environmental, social, and governance (ESG) criteria into investment decisions reflects Traders SACCO's commitment to sustainable and ethical finance.<br>
+                            5. Providing flexible repayment options and support services for members facing financial difficulties .<br>
+                           6.  Regularly reviewing and updating policies and procedures in line with industry best practices.
+                          </div>
+                          <button class="dropdown-btn">5. Empowerment  
+                            <i class="fa fa-caret-down"></i>
+                          </button>
+                          <div class="dropdown-container">
+                           1. we  offer financial literacy programs that equip members with the knowledge and skills to make informed decisions.<br>
+                            2.We facilitate access to savings and credit facilities empowers members to invest in entrepreneurship and income-generating activities.<br>
+                            3.We establishing mentorship programs and networking opportunities that enables members to learn from successful entrepreneurs and professionals within the community.<br>
+                            4. Supporting capacity-building initiatives, such as training workshops and skill development programs, to enhance members' ability to seize opportunities and navigate challenges effectively.<br>
+                            5. Advocating for gender equality and inclusivity ensures that all members, regardless of background or status, have equal access to resources and opportunities for empowerment.<br>
+                            6. Collaborating with local organizations and government agencies to address social and economic barriers fosters a supportive ecosystem where members can thrive and achieve their goals.
+                          </div>
+                          </div>
+                     
+                      <script>
+                      /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+                      var dropdown = document.getElementsByClassName("dropdown-btn");
+                      var i;
+                      
+                      for (i = 0; i < dropdown.length; i++) {
+                        dropdown[i].addEventListener("click", function() {
+                          this.classList.toggle("active");
+                          var dropdownContent = this.nextElementSibling;
+                          if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                          } else {
+                            dropdownContent.style.display = "block";
+                          }
+                        });
+                      }
+                      </script>
+                    </div>
+            </div>
+            
+            <div id="d1" class="centered" style="height: 650px;background-color: gray">
+              <h style="color: blue; font-weight: bold;">Why Choose Us?</h>
+                <div class="right">
+                  <h style="text-decoration: underline;color:rgb(20, 20, 104);">1. Tailored Financial Solutions<br></h>
+                  
+                  Our flexible financial products and services are tailored to meet the specific needs of our clients. Whether you require working capital, investment loans, or personal finance solutions, we have you covered.<br>
+                  
+                  <h style="text-decoration: underline;color:rgb(20, 20, 104);">2. Financial Inclusion<br></h>
+                  
+                  We strive to empower underserved and unbanked individuals and businesses, ensuring that they have access to affordable financial services that can help them thrive.<br>
+                  
+                 <h style="text-decoration: underline;color:rgb(20, 20, 104);"> 3. Competitive Interest Rates<br></h>
+                  
+                  Our interest rates are among the most competitive in the market. We believe in providing fair and transparent pricing to help you achieve your financial goals without unnecessary burdens.<br>
+                  
+                 <h style="text-decoration: underline;color:rgb(20, 20, 104);">4. Strong Community Engagement</h> <br>
+                  
+                  We actively engage with the communities we serve, not only as a financial institution but as a responsible corporate citizen. We support local initiatives and collaborate with local organizations to promote sustainable development.<br>
+                  
+                  <h style="text-decoration: underline;color:rgb(20, 20, 104);">5. Technological Innovation<br></h>
+                  
+                  We embrace the latest technological advancements to enhance your banking experience. Our digital banking services provide you with 24/7 access to your accounts, making managing your finances more convenient than ever.
+                     </div>
+            </div>
+            <p style="background-image: url(cove3.jpg);color: green; height: 1250px;padding-left: 60px;">
+              <h style="text-align: center;color: blue; font-weight: bold; align-items: center;padding: 220px;">OUR STRATEGIC PLANS</h></br>
+              TIK TRADERS SACCO desire is to become a significant provider of financial, technical, and training services that are appropriate for global low and middle income population.<br><h style="color:blue;"> To this end, it seeks to pursue the following six strategic objectives:</h><br>
+                1.Increasing the incomes of members in their economic world.<br>
+                2 Encouraging micro and small-scale businessmen and women to pursue their personal and business ambitions for their own good and the good of their families and communities<br>
+                3. Providing increased access to credit services for Community's low income population.<br>
+                4.Fostering good business ethics and values among its clients.<br>
+                5.Encouraging clients, as individuals or groups, to build the spirit of self-reliance and self-determination in effectively influencing development strategy to their own good.<br>
+                6. Encouraging more women in particular to get into micro and small-scale business activities by making credit readily available to women.
+        </p>
+        <p>
+            <div id="d2" class="centered">
+             <div class="left">
+              <h style="font-weight: bold;">SERVICES</h>
+              <form>
+                <ul>
+                  <il><a href="tik home.php#loans" style="text-decoration: none;"> loans</a></il></br>
+                  <il> <a href="tik home.php#savings" style="text-decoration: none;"> savings</a></il></br>
+                  <il><a href="tik home.php#advertisement" style="text-decoration: none;">advertisement</a></il></br>
+                  <il> <a href="tik home.php#communication" style="text-decoration: none;">communication</a></il></br>
+                  <il><a href="tik home.php#marry go round" style="text-decoration: none;"> marrygoround</a></il></ul></br>
+                </ul>
+              </form>
+             </div>
+            </div>
+            <div id="d2" class="">
+              <div class="left">
+               <h style="font-weight: bold;">CUSTOMERCARE</h>
+               <form>
+                <ul>
+                    <il><a href="callto:" style="text-decoration: none;text-align: left;font-size:160%;"> <img
+                            src="call.png" class="call-icon" id="callIcon" alt="calls"
+                            style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the call icon element
+                        var callIcon = document.getElementById('callIcon');
+
+                        // Add click event listener to the call icon
+                        callIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired phone number
+                            var phoneNumber = '+254716140575';
+
+                            // Initiate the phone call
+                            window.location.href = 'tel:' + phoneNumber;
+                        });
+                        </script>
+                    </a></il><br>
+                    <il> <a href="" style="text-align: left;font-size:160%;" class="whatsapp-icon" id="whatsappIcon"> <img
+                            src="whatsapp.png" alt="whatsapp" style="height: 40px; width: 40px;">
+                        <script>
+                        // Get the WhatsApp icon element
+                        var whatsappIcon = document.getElementById('whatsappIcon');
+
+                        // Add click event listener to the WhatsApp icon
+                        whatsappIcon.addEventListener('click', function() {
+                            // Change the phone number to your desired WhatsApp number
+                            var phoneNumber = '+254716140575'; // Your WhatsApp number
+
+                            // Generate the WhatsApp message link
+                            var whatsappLink = 'https://wa.me/' + phoneNumber;
+
+                            // Open the WhatsApp link in a new tab/window
+                            window.open(whatsappLink, '_blank');
+                        });
+                        </script>
+                    </a></il><br>
+                   <il>  <a href="mailto:timothykimanzi47@gmail.com"
+                        style="text-decoration: none;text-align: left;font-size:160%;"> <img src="email.jpg" alt="email"
+                            style="height: 40px; width: 40px;"></a>
+                </il>
+                </ul>
+            </form>
+              </div>
+             </div>
+          </p>
+    </body>
+</html>
